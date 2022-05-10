@@ -1,1 +1,5 @@
 # String-Search-in-Lua
+This Lua program searches for substrings in a txt file.  It uses naive, Rabin-Karp, and Kunth-Morris-Pratt.\
+From results: \
+I would say for any string searching on a file with a large needle Rabin-Karp is probably the strongest of the three sorting algorithms.  It will be faster than naive and not take nearly as much space as Kunth-Morris-Pratt.  If space is not a concern you could use Kunth-Morris-Pratt as its performance will be very close to Rabin-Karp.  But for very large needles I assume Rabin-Karp will be faster than Kunth-Morris-Pratt as it seems to show more of a constant trend.  This trend would probably be more apparent in my tests if I used a higher prime number for my hashing value.\
+If the needle is quiet small Kunth-Morris-Pratt will be optimal for speed.  While Rabin-Karp seems to be more constant than Kunth-Morris-Pratt, its results at lower needle values are definitely worse than Kunth-Morris-Pratt.  If space is a concern than naive can actually be used if your needle size is 1.  Otherwise, you should just take the performance hit and run Rabin-Karp.
